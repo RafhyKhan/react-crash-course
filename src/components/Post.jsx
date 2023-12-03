@@ -1,10 +1,11 @@
 import classes from './Post.module.css';
+import { Link } from 'react-router-dom';
 
 //Name options
 //const names = ['Maximilian', 'Manuel'];
 
 
-function Post({ author, body }) {
+function Post({ id, author, body }) {
 
     //const chosenName = Math.random() > 0.5 ? names[0] : names[1]
     //Using tetiry operators for the if statements, if Math.random
@@ -13,8 +14,10 @@ function Post({ author, body }) {
 
     return (
         <li className={classes.post}>
-            <p className={classes.author}>{author}</p>
-            <p className={classes.text}>{body}</p>
+            <Link to={id}>
+                <p className={classes.author}>{author}</p>
+                <p className={classes.text}>{body}</p>
+            </Link>
         </li>
     );
 }
