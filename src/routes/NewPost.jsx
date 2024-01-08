@@ -12,11 +12,11 @@ function NewPost() {
         <Modal>
             <Form method='post' className={classes.form} >
                 <p>
-                    <label htmlFor="name">Page Type</label>
+                    <label htmlFor="name">textOne</label>
                     <input type="text" id="author" name="author" required />
                 </p>
                 <p>
-                    <label htmlFor="name">textSecond</label>
+                    <label htmlFor="name">textTwo</label>
                     <input type="text" id="name" name="textTwo"  />
                 </p>
                 <p>
@@ -24,12 +24,10 @@ function NewPost() {
                     <input type="text" id="name" name="textThree"  />
                 </p>
                 <p>
-                    <label htmlFor="body">Page Description</label>
+                    <label htmlFor="body">textFour</label>
                     <textarea id="body" name="body" required rows={3} />
                 </p>
-                {/* Submit button requires a function, to submit whole form for 
-                    Data processing, Transforming, 
-                    Final page(PDF download, email to them, etc; Proof of use) */}
+                {/* Submit button only submit the form for a update of page*/}
                 <p className={classes.actions}>
                     <Link to="/" type="button" >Cancel</Link>
                     <button>Submit</button>
@@ -43,6 +41,7 @@ export default NewPost;
 
 
 export async function action({request}) {
+    /*
     const formData = await request.formData();
     const postData = Object.fromEntries(formData); // {body: '...', author: '...'}
     // formData.get('body'); //extract the data provided by the user
@@ -56,4 +55,5 @@ export async function action({request}) {
 
     console.log(response);
     return (redirect('/'));
+    */
 }
