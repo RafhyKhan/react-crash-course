@@ -4,7 +4,10 @@ import Modal from '../components/Modal';
 import classes from './PostDetails.module.css';
 
 function PostDetails() {
-  const post = useLoaderData();
+  //const post = useLoaderData();
+
+  let post = {};
+
 
   if (!post) {
     //Error Handling, if database is not returning back anything!!!
