@@ -5,7 +5,10 @@ import { CiUser } from "react-icons/ci";
 
 import classes from './MainHeader.module.css';
 
+
 function MainHeader() {
+
+  //main header function
   return (
     <header className={classes.header}>
       <h1 className={classes.logo}>
