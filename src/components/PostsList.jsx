@@ -95,7 +95,7 @@ function PostsList() {
             </div>  )}  
 
             <p className={classes.submission}>
-                <Link to="/create-post" className={classes.button} >
+                <Link to="/" className={classes.button} >
                         Submit
                 </Link>
             </p>
