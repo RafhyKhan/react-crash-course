@@ -12,13 +12,24 @@ function NewPost() {
         <Modal>
             <Form method='post' className={classes.form} >
                 <p>
-                    <label htmlFor="body">Text</label>
-                    <textarea id="body" name="body" required rows={3} />
+                    <label htmlFor="name">Page Type</label>
+                    <input type="text" id="author" name="author" required />
                 </p>
                 <p>
-                    <label htmlFor="name">Your name</label>
-                    <input type="text" id="name" name="author" required />
+                    <label htmlFor="name">textSecond</label>
+                    <input type="text" id="name" name="textTwo"  />
                 </p>
+                <p>
+                    <label htmlFor="name">textThree</label>
+                    <input type="text" id="name" name="textThree"  />
+                </p>
+                <p>
+                    <label htmlFor="body">Page Description</label>
+                    <textarea id="body" name="body" required rows={3} />
+                </p>
+                {/* Submit button requires a function, to submit whole form for 
+                    Data processing, Transforming, 
+                    Final page(PDF download, email to them, etc; Proof of use) */}
                 <p className={classes.actions}>
                     <Link to="/" type="button" >Cancel</Link>
                     <button>Submit</button>

@@ -7,6 +7,7 @@ function PostDetails() {
   const post = useLoaderData();
 
   if (!post) {
+    //Error Handling, if database is not returning back anything!!!
     return (
       <Modal>
         <main className={classes.details}>
@@ -25,7 +26,9 @@ function PostDetails() {
     <Modal>
       <main className={classes.details}>
         <p className={classes.author}>{post.author}</p>
-        <p className={classes.text}>{post.body}</p>
+        <p className={classes.text}>{post.textOne}</p>
+        <p className={classes.text}>{post.textTwo}</p>
+        <p className={classes.text}>{post.textThree}</p>
       </main>
     </Modal>
   );

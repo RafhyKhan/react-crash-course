@@ -1,5 +1,6 @@
 import classes from './Post.module.css';
 import { Link } from 'react-router-dom';
+import { MdPostAdd, MdMessage } from 'react-icons/md';
 
 //Name options
 //const names = ['Maximilian', 'Manuel'];
@@ -17,6 +18,10 @@ function Post({ id, author, body }) {
             <Link to={id}>
                 <p className={classes.author}>{author}</p>
                 <p className={classes.text}>{body}</p>
+            </Link>
+            <Link to="/create-post" className={classes.button} >
+                <MdPostAdd size={18} />
+                    Edit Information
             </Link>
         </li>
     );
