@@ -6,7 +6,7 @@ import { MdPostAdd, MdMessage } from 'react-icons/md';
 //const names = ['Maximilian', 'Manuel'];
 
 
-function Post({ id, author, body }) {
+function Post({ id, page, pageDetails }) {
 
     //const chosenName = Math.random() > 0.5 ? names[0] : names[1]
     //Using tetiry operators for the if statements, if Math.random
@@ -15,13 +15,13 @@ function Post({ id, author, body }) {
 
     return (
         <li className={classes.post}>
-            <Link to={id}>
-                <p className={classes.author}>{author}</p>
-                <p className={classes.text}>{body}</p>
+            <Link to={"/page/:" + id}>
+                <p className={classes.author}>{page}</p>
+                <p className={classes.text}>{pageDetails}</p>
             </Link>
-            <Link to="/create-post" className={classes.button} >
+            <Link to={"/edit-page/:" + id} className={classes.button} >
                 <MdPostAdd size={18} />
-                    Edit Information
+                    Edit
             </Link>
         </li>
     );

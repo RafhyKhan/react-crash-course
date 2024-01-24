@@ -13,12 +13,12 @@ function MainHeader() {
     <header className={classes.header}>
       <h1 className={classes.logo}>
         <MdAttachMoney size={40} />
-        Data Entry App
+        Data Entry
       </h1>
       <p>
         <Link to="/" className={classes.button} >
                 <CiUser size={25} />
-                    Login
+                    User
         </Link>
       </p>
     </header>
